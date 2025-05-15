@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaguars - The Majestic Big Cats</title>
+</head>
+<body>
+    <header>
+        <h1>Jaguars: The Powerful Predators</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Jaguars</a></li>
+                <li><a href="#habitat">Habitat</a></li>
+                <li><a href="#diet">Diet</a></li>
+                <li><a href="#conservation">Conservation</a></li>
+                <li><a href="#donate">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Jaguars</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Standing_jaguar.jpg" alt="Jaguar standing in grass" width="500">
+            <p>The jaguar (Panthera onca) is the largest cat species in the Americas and the third-largest in the world after tigers and lions.</p>
+            <p>Jaguars are known for their powerful build and distinctive coat pattern of rosettes (rose-like markings).</p>
+            <p>These magnificent cats can weigh between 100-250 pounds (45-113 kg) and measure up to 6 feet (1.8 m) in length, not including their tail.</p>
+        </section>
+
+        <section id="habitat">
+            <h2>Habitat</h2>
+            <p>Jaguars are found in a variety of habitats including:</p>
+            <ul>
+                <li>Rainforests</li>
+                <li>Swamps</li>
+                <li>Grasslands</li>
+                <li>Scrublands</li>
+                <li>Deserts</li>
+            </ul>
+            <p>Their range extends from the southwestern United States through Mexico and Central America into South America, including much of the Amazon basin.</p>
+        </section>
+
+        <section id="diet">
+            <h2>Diet and Hunting</h2>
+            <p>Jaguars are apex predators with a diverse diet that includes:</p>
+            <ul>
+                <li>Deer</li>
+                <li>Peccaries</li>
+                <li>Capybaras</li>
+                <li>Tapirs</li>
+                <li>Fish</li>
+                <li>Turtles</li>
+                <li>Caimans</li>
+            </ul>
+            <p>They are known for their powerful bite which allows them to pierce the skulls or shells of their prey.</p>
+        </section>
+
+        <section id="conservation">
+            <h2>Conservation Status</h2>
+            <p>Jaguars are currently classified as Near Threatened by the IUCN Red List.</p>
+            <p>Major threats to jaguars include:</p>
+            <ul>
+                <li>Habitat loss due to deforestation</li>
+                <li>Human-wildlife conflict</li>
+                <li>Illegal hunting for their pelts</li>
+                <li>Climate change</li>
+            </ul>
+            <p>Conservation efforts are underway throughout their range to protect these magnificent cats.</p>
+        </section>
+
+        <section>
+            <h2>Fun Facts About Jaguars</h2>
+            <ul>
+                <li>Jaguars are excellent swimmers and often hunt in water</li>
+                <li>They have the strongest bite of all big cats relative to their size</li>
+                <li>Black panthers are actually jaguars or leopards with melanism</li>
+                <li>Jaguars were revered in many ancient Mesoamerican cultures</li>
+                <li>They are solitary animals except during mating season</li>
+            </ul>
+        </section>
+
+        <section id="donate">
+            <h2>Support Jaguar Conservation</h2>
+            <form id="donationForm">
+                <h3>Join Our Cause</h3>
+                <div>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="amount">Donation Amount ($):</label>
+                    <input type="number" id="amount" name="amount" min="5" value="25" required>
+                </div>
+                <button type="submit">Donate Now</button>
+            </form>
+            
+            <div id="thankYou" style="display:none;">
+                <h3>Thank you for your support!</h3>
+                <p>Your donation will help protect jaguars and their habitats.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Learn more about jaguar conservation:</p>
+        <ul>
+            <li><a href="https://www.worldwildlife.org/species/jaguar" target="_blank">WWF Jaguar Conservation</a></li>
+            <li><a href="https://www.nationalgeographic.com/animals/mammals/facts/jaguar" target="_blank">National Geographic</a></li>
+            <li><a href="https://www.panthera.org/cat/jaguar" target="_blank">Panthera Jaguar Program</a></li>
+        </ul>
+        <p>&copy; 2023 Jaguar Information Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('donationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const amount = document.getElementById('amount').value;
+            
+            // Hide form and show thank you message
+            document.getElementById('donationForm').style.display = 'none';
+            document.getElementById('thankYou').style.display = 'block';
+            
+            // You would normally send this data to a server here
+            console.log(`Thank you ${name} for your donation of $${amount}!`);
+        });
+    </script>
+</body>
+</html>
